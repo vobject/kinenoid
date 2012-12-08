@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DebugOverlayDrawer.cpp" />
+    <ClCompile Include="src\Engine.cpp" />
+    <ClCompile Include="src\EngineManagment.cpp" />
+    <ClCompile Include="src\FpsDrawer.cpp" />
+    <ClCompile Include="src\GraupnerConnection.cpp" />
+    <ClCompile Include="src\GraupnerManagement.cpp" />
+    <ClCompile Include="src\GraupnerMovement.cpp" />
+    <ClCompile Include="src\GraupnerPoseCalculator.cpp" />
+    <ClCompile Include="src\JointDrawer.cpp" />
+    <ClCompile Include="src\Observer.cpp" />
+    <ClCompile Include="src\KinectWrapper.cpp" />
+    <ClCompile Include="src\KinenoidApp.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SdlWindow.cpp" />
+    <ClCompile Include="src\SdlWindowDrawer.cpp" />
+    <ClCompile Include="src\Subject.cpp" />
+    <ClCompile Include="src\UserData.cpp" />
+    <ClCompile Include="src\UserTracking.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\DebugOverlayDrawer.h" />
+    <ClInclude Include="src\Engine.h" />
+    <ClInclude Include="src\EngineManagment.h" />
+    <ClInclude Include="src\FpsDrawer.h" />
+    <ClInclude Include="src\GraupnerConnection.h" />
+    <ClInclude Include="src\GraupnerManagement.h" />
+    <ClInclude Include="src\GraupnerMovement.h" />
+    <ClInclude Include="src\GraupnerPoseCalculator.h" />
+    <ClInclude Include="src\JointDrawer.h" />
+    <ClInclude Include="src\Observer.h" />
+    <ClInclude Include="src\KinectWrapper.h" />
+    <ClInclude Include="src\Log.h" />
+    <ClInclude Include="src\KinenoidApp.h" />
+    <ClInclude Include="src\SdlWindow.h" />
+    <ClInclude Include="src\SdlWindowDrawer.h" />
+    <ClInclude Include="src\Subject.h" />
+    <ClInclude Include="src\UserData.h" />
+    <ClInclude Include="src\UserTracking.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{782A0A1C-537D-4FE8-BBD9-E1E6E4AD208E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kinenoid</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin/$(Configuration)\</OutDir>
+    <IntDir>$(Platform)$(Configuration)\</IntDir>
+    <LibraryPath>..\external\SDL-1.2.14\lib;..\external\SDL_ttf-2.0.10\lib;..\external\boost_1_46_1\lib;$(OPEN_NI_LIB);..\external\OgreSDK_vc10_v1-7-3\lib\$(Configuration);..\external\OgreSDK_vc10_v1-7-3\boost_1_44\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\external\SDL-1.2.14\include;..\external\SDL_ttf-2.0.10\include;..\external\boost_1_46_1;$(OPEN_NI_INCLUDE);..\external\OgreSDK_vc10_v1-7-3\include;..\external\OgreSDK_vc10_v1-7-3\include\OGRE;..\external\OgreSDK_vc10_v1-7-3\include\OIS;..\external\OgreSDK_vc10_v1-7-3\boost_1_44;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin/$(Configuration)\</OutDir>
+    <IntDir>$(Platform)$(Configuration)\</IntDir>
+    <IncludePath>..\external\SDL-1.2.14\include;..\external\SDL_ttf-2.0.10\include;..\external\boost_1_46_1;$(OPEN_NI_INCLUDE);..\external\OgreSDK_vc10_v1-7-3\include;..\external\OgreSDK_vc10_v1-7-3\include\OGRE;..\external\OgreSDK_vc10_v1-7-3\include\OIS;..\external\OgreSDK_vc10_v1-7-3\boost_1_44;$(IncludePath)</IncludePath>
+    <LibraryPath>..\external\SDL-1.2.14\lib;..\external\SDL_ttf-2.0.10\lib;..\external\boost_1_46_1\lib;$(OPEN_NI_LIB);..\external\OgreSDK_vc10_v1-7-3\lib\$(Configuration);..\external\OgreSDK_vc10_v1-7-3\boost_1_44\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>false</UseFullPaths>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_ttf.lib;OpenNI.lib;OgreMain_d.lib;OIS_d.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\external\SDL-1.2.14\lib\SDL.dll bin\$(Configuration)\SDL.dll
+copy ..\external\SDL_ttf-2.0.10\lib\SDL_ttf.dll bin\$(Configuration)\SDL_ttf.dll
+copy ..\external\SDL_ttf-2.0.10\lib\libfreetype-6.dll bin\$(Configuration)\libfreetype-6.dll
+copy ..\external\SDL_ttf-2.0.10\lib\zlib1.dll bin\$(Configuration)\zlib1.dll
+copy res\VeraMono.ttf bin\$(Configuration)\VeraMono.ttf
+
+copy ..\external\OgreSDK_vc10_v1-7-3\bin\$(Configuration)\* bin\$(Configuration)\
+</Command>
+      <Message>Copy dependencies into target folder...</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_ttf.lib;OpenNI.lib;OgreMain.lib;OIS.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\external\SDL-1.2.14\lib\SDL.dll bin\$(Configuration)\SDL.dll
+copy ..\external\SDL_ttf-2.0.10\lib\SDL_ttf.dll bin\$(Configuration)\SDL_ttf.dll
+copy ..\external\SDL_ttf-2.0.10\lib\libfreetype-6.dll bin\$(Configuration)\libfreetype-6.dll
+copy ..\external\SDL_ttf-2.0.10\lib\zlib1.dll bin\$(Configuration)\zlib1.dll
+copy res\VeraMono.ttf bin\$(Configuration)\VeraMono.ttf
+
+copy ..\external\OgreSDK_vc10_v1-7-3\bin\$(Configuration)\* bin\$(Configuration)\</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy dependencies into target folder...</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
